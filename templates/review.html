@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Resume</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h2>Step 2: Review & Edit</h2>
+    <form action="/generate-pdf" method="post">
+        <input type="hidden" name="full_name" value="{{ full_name }}">
+        <input type="hidden" name="email" value="{{ email }}">
+        <input type="hidden" name="phone" value="{{ phone }}">
+        <label>Summary:</label><br>
+        <textarea name="summary">{{ summary }}</textarea><br><br>
+        <label>Experience & Education:</label><br>
+        <textarea name="rewritten">{{ rewritten }}</textarea><br><br>
+        <button type="submit">Generate PDF</button>
+    </form>
+</body>
+</html>

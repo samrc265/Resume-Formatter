@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template</title>
+    <style>
+        body { font-family: "Arial", sans-serif; margin: 40px; }
+        h1 { font-size: 24px; margin-bottom: 0; }
+        h2 { font-size: 18px; margin-top: 20px; }
+        p { margin: 4px 0; }
+    </style>
+</head>
+<body>
+    <h1>{{ full_name }}</h1>
+    <p>{{ email }} | {{ phone }}</p>
+    <h2>Summary</h2>
+    <p>{{ summary }}</p>
+    <h2>Experience & Education</h2>
+    <p>{{ rewritten|replace('\n','<br>')|safe }}</p>
+</body>
+</html>
